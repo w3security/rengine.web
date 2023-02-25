@@ -1,6 +1,6 @@
 # Disabling trivy scans while they get troubleshooting for failures
 ---
-name: Trivy Container Scan
+name: 🚨 Trivy Container Scan
 on:
   push:
     branches:
