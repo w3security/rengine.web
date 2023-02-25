@@ -41,10 +41,10 @@ RUN apt update -y && apt install -y  --no-install-recommends \
     geoip-database
 
 
-# Download and install go 1.18
-RUN wget https://golang.org/dl/go1.18.2.linux-amd64.tar.gz
-RUN tar -xvf go1.18.2.linux-amd64.tar.gz
-RUN rm go1.18.2.linux-amd64.tar.gz
+# Download and install go 1.19
+RUN wget https://golang.org/dl/go1.19.linux-amd64.tar.gz
+RUN tar -xvf go1.19.linux-amd64.tar.gz
+RUN rm go1.19.linux-amd64.tar.gz
 RUN mv go /usr/local
 
 # Download geckodriver
@@ -84,7 +84,7 @@ RUN GO111MODULE=on go install -v github.com/tomnomnom/gf@latest
 RUN GO111MODULE=on go install -v github.com/tomnomnom/unfurl@latest
 RUN GO111MODULE=on go install -v github.com/tomnomnom/waybackurls@latest
 
-RUN go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+RUN GO111MODULE=on go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 RUN GO111MODULE=on go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 RUN GO111MODULE=on go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 RUN GO111MODULE=on go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
