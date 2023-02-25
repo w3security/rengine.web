@@ -84,7 +84,7 @@ RUN GO111MODULE=on go install -v github.com/tomnomnom/gf@latest
 RUN GO111MODULE=on go install -v github.com/tomnomnom/unfurl@latest
 RUN GO111MODULE=on go install -v github.com/tomnomnom/waybackurls@latest
 
-RUN GO111MODULE=on go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+RUN "/bin/su -l op -c 'GO111MODULE=on /usr/local/go/bin/go install github.com/projectdiscovery/httpx/cmd/httpx@latest'"
 RUN GO111MODULE=on go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 RUN GO111MODULE=on go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 RUN GO111MODULE=on go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
