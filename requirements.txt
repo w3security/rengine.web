@@ -1,5 +1,5 @@
 argh
-beautifulsoup4==4.9.3
+beautifulsoup4==4.11.2
 celery==5.2.2
 degoogle==1.0.1
 discord-webhook==0.14.0
