@@ -1,8 +1,11 @@
-name: Auto Update Submodule
+name: 🥳 Auto Update Submodule
 
 on:
   repository_dispatch:
     types: [ sync-shared-submodules ]
+  schedule:
+    #  every day at 5:30 
+      - cron:  '30 1 * * *'
 
 env:
   COMMIT_MESSAGE: "chore: update submodules"
