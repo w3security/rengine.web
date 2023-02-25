@@ -1,6 +1,9 @@
 name: 🥳 Auto Update Submodule
 
 on:
+  push:
+    branches:
+      - main
   repository_dispatch:
     types: [ sync-shared-submodules ]
   schedule:
