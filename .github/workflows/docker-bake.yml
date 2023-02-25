@@ -20,7 +20,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            w3security/rengine_web
+            name/app
           tags: |
             type=ref,event=branch
             type=ref,event=pr
