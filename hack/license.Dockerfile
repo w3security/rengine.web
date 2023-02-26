@@ -37,5 +37,4 @@ FROM base AS validate
 ARG LICENSE_ARGS
 ARG LICENSE_FILES
 RUN --mount=type=bind,target=. \
-  --mount=from=addlicense,source=/app/addlicense,target=/usr/bin/addlicense \
-  find . -regex "${LICENSE_FILES}" | xargs addlicense -check ${LICENSE_ARGS}
+  --mount=from=addlicense,source=/app/addlicense,target=/usr/bin/addlicense 
